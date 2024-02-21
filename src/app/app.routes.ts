@@ -5,7 +5,7 @@ import { ProfileComponent } from './pages/students/components/profile/profile.co
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'dashboard',
+        redirectTo: 'students',
         pathMatch: "full"
     },
 
