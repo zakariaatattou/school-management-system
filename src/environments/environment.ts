@@ -5,7 +5,7 @@
 export let environment: any = {
     appName: 'Khadamati',
     production: false,
-    serverUrl: "http://localhost:8000/api",
+    serverUrl: "https://school-management-system-backend-wuzp.onrender.com/api",
     env: 'Development',
     version: '2.2',
     defaultLang: 'en',
