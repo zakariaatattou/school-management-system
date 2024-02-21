@@ -24,12 +24,6 @@ export const routes: Routes = [
                 path: 'students',
                 loadComponent: () => import('./pages/students/students.component').then(x => x.StudentsComponent),
                 data: { title: "Students" },
-                // children: [
-                //     {
-                //         path: 'details/:id',
-                //         component: ProfileComponent
-                //     }
-                // ]
             },
             {
                 path: 'dashboard',
