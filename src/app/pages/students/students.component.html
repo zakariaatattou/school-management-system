@@ -1,0 +1,118 @@
+<ng-container>
+
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>List of Students <span>Total (50)</span></h2>
+        </div>
+
+        <div class="d-flex g-1">
+            <button mat-raised-button
+                    (click)="onFilter()"
+                    class="example-icon"
+                    aria-label="Example icon-button with menu icon">
+                <mat-icon>filter_list</mat-icon>
+                <span>Filter</span>
+            </button>
+            <button mat-raised-button
+                    color="primary"
+                    class="example-icon"
+                    (click)="onAddStudent()"
+                    aria-label="Example icon-button with menu icon">
+                <mat-icon>supervised_user_circle</mat-icon>
+                <span>Add Student</span>
+            </button>
+        </div>
+    </header>
+
+
+    <table mat-table
+           [dataSource]="$students | async"
+           class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="Fullname">
+            <th mat-header-cell
+                *matHeaderCellDef> Full name </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.firstName}} {{element.lastName}} </td>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="Class">
+            <th mat-header-cell
+                *matHeaderCellDef> Class </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.className}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Age">
+            <th mat-header-cell
+                *matHeaderCellDef> Age </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Address">
+            <th mat-header-cell
+                *matHeaderCellDef> Address </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.address}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Date of Birth">
+            <th mat-header-cell
+                *matHeaderCellDef> Date of Birth </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.dateOfBirth | date}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="Gender">
+            <th mat-header-cell
+                *matHeaderCellDef> Gender </th>
+            <td mat-cell
+                *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell
+                *matHeaderCellDef> </th>
+            <td mat-cell
+                *matCellDef="let element">
+                <div class="d-flex justify-content-end col-12">
+                    <button mat-icon-button
+                            (click)="onRemoveStudent(element.id)"
+                            class="example-icon"
+                            aria-label="Example icon-button with menu icon">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                    <button mat-icon-button
+                            (click)="onUpdateStudent(element)"
+                            class="example-icon"
+                            aria-label="Example icon-button with menu icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button
+                            (click)="onViewProfile(element)"
+                            class="example-icon"
+                            aria-label="Example icon-button with menu icon">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+
+            </td>
+        </ng-container>
+
+        <tr mat-header-row
+            *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row
+            *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</ng-container>

@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+}
+
+::ng-deep .custom-modalbox {
+    mat-dialog-container {
+        position: absolute !important;
+        right: 0 !important;
+        left: unset !important;
+        width: 35vw !important;
+    }
+
+    mat-dialog-content {
+        min-height: 100%;
+        margin-bottom: auto;
+    }
+
+
+    mat-dialog-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}

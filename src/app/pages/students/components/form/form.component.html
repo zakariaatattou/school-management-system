@@ -1,0 +1,84 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="">First name</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <input matInput
+                   formControlName="firstName"
+                   type="text">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label for="">Last name</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <input matInput
+                   formControlName="lastName"
+                   type="text">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label for="">Age</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <input matInput
+                   formControlName="age"
+                   type="number">
+        </mat-form-field>
+
+    </div>
+    <div class="form-group">
+        <label for="">Address</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <input matInput
+                   formControlName="address"
+                   type="text">
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label for="">Date of Birth</label>
+        <mat-form-field appearance="outline"
+                        subscriptSizing="dynamic"
+                        floatPlaceholder="never">
+            <input matInput
+                   [matDatepicker]="picker"
+                   formControlName="dateOfBirth">
+            <mat-datepicker-toggle matIconSuffix
+                                   [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label for="">Gender</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <mat-select formControlName="gender">
+                <mat-option value="MALE">Male</mat-option>
+                <mat-option value="FEMALE">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <label for="">Class</label>
+
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <mat-select formControlName="className">
+                @for (class of $classes | async; track class) {
+                <mat-option [value]="class.name">{{class.name}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="d-flex col-12 justify-content-end g-1">
+        <button (click)="onCancel()"
+                mat-button>Cancel</button>
+        <button (click)="onSave()"
+                mat-raised-button
+                color="primary"
+                cdkFocusInitial>Save</button>
+    </div>
+
+</form>

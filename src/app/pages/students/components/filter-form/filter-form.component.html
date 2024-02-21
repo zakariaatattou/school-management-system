@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <label for="">Class</label>
+        <mat-form-field subscriptSizing="dynamic"
+                        appearance="outline">
+            <mat-select formControlName="className">
+                @for (class of $classes | async; track class) {
+                <mat-option [value]="class.name">{{class.name}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+</form>
+
+<div class="d-flex col-12 justify-content-end g-1">
+    <button (click)="onReset()"
+            mat-button>Reset</button>
+    <button (click)="onSave()"
+            mat-raised-button
+            color="primary"
+            cdkFocusInitial>Save</button>
+</div>

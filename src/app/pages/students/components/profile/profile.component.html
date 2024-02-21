@@ -1,0 +1,128 @@
+<div class="profile">
+    <div class="img">
+        <img src="https://www.clever.com/wp-content/uploads/2023/06/teenagers-at-desk.jpg"
+             alt="">
+        <span class="name">{{data.student.firstName}} {{data?.student.lastName}}</span>
+        <span class="email">{{data.student.email}}</span>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-6 d-flex flex-column g-1 mb-2">
+            <label for="">Class:</label>
+            <span>{{data.student.className}}</span>
+        </div>
+        <div class="col-6 d-flex flex-column g-1 mb-2">
+            <label for="">Age:</label>
+            <span>{{data.student.age}}</span>
+        </div>
+        <div class="col-6 d-flex flex-column g-1 mb-2">
+            <label for="">Address:</label>
+            <span>{{data.student.address}}</span>
+        </div>
+        <div class="col-6 d-flex flex-column g-1 mb-2">
+            <label for="">Date of Birth:</label>
+            <span>{{data.student.dateOfBirth}}</span>
+        </div>
+        <div class="col-6 d-flex flex-column g-1 mb-2">
+            <label for="">Gender:</label>
+            <span>{{data.student.gender}}</span>
+        </div>
+    </div>
+
+
+    <mat-tab-group>
+        <mat-tab label="Math">
+            <table mat-table
+                   [dataSource]="dataSource"
+                   class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Exam name">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Name </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examName}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Exam grade">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Grade </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examGrade}} </td>
+                </ng-container>
+
+                <tr mat-header-row
+                    *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row
+                    *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+
+        </mat-tab>
+        <mat-tab label="History">
+            <table mat-table
+                   [dataSource]="dataSource"
+                   class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+               The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Exam name">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Name </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examName}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Exam grade">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Grade </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examGrade}} </td>
+                </ng-container>
+
+                <tr mat-header-row
+                    *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row
+                    *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </mat-tab>
+        <mat-tab label="Geograpphy">
+            <table mat-table
+                   [dataSource]="dataSource"
+                   class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+               The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="Exam name">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Name </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examName}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="Exam grade">
+                    <th mat-header-cell
+                        *matHeaderCellDef> Exam Grade </th>
+                    <td mat-cell
+                        *matCellDef="let element"> {{element.examGrade}} </td>
+                </ng-container>
+
+                <tr mat-header-row
+                    *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row
+                    *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

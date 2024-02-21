@@ -1,0 +1,22 @@
+<div class="profile">
+    <img src="https://i.insider.com/5ca389adc6cc503c5a53fd96?width=600&format=jpeg"
+         alt="">
+
+    <span class="name">{{user?.firstName}} {{user?.lastName}}</span>
+    <span class="email">{{user?.email}}</span>
+</div>
+
+<mat-nav-list>
+    @for (item of sidebarService.getSidebarItems(); track item){
+    <a mat-list-item
+       [routerLink]="item.route"
+       (click)="sidebarService.toggleSidebarCollapse()"
+       routerLinkActive
+       [routerLinkActiveOptions]="{exact: true}"
+       #rla="routerLinkActive"
+       [activated]="rla.isActive">
+        <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
+        <span matListItemTitle>{{item.title}}</span>
+    </a>
+    }
+</mat-nav-list>

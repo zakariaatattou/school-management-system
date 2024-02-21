@@ -1,0 +1,112 @@
+{
+    "students": [
+        {
+            "firstName": "Emily",
+            "lastName": "Clark",
+            "picture": "https://example.com/images/students/1.jpg",
+            "age": 15,
+            "address": 12345,
+            "dateOfBirth": "2009-05-22",
+            "gender": "female"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        },
+        {
+            "firstName": "Noah",
+            "lastName": "Rodriguez",
+            "picture": "https://example.com/images/students/2.jpg",
+            "age": 17,
+            "address": 67890,
+            "dateOfBirth": "2007-08-11",
+            "gender": "male"
+        }
+    ]
+}

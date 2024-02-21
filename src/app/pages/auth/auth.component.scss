@@ -1,0 +1,22 @@
+.first-col {
+    img {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+
+.second-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+
+
+    form {
+        h1 {
+            margin-bottom: 3rem;
+        }
+    }
+}

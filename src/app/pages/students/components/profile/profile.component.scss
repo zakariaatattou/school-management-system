@@ -1,0 +1,32 @@
+.profile {
+    .img {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        img {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: grey;
+        }
+    }
+
+
+    label {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    span {
+        color: black;
+    }
+}
